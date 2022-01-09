@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+    {% load crispy_forms_tags %}
+
+    <h3>Experiment-1</h3>
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form1}}
+                    
+                    <button type = "submit" name = "btn1" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+                
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form2}}
+
+                    <button type = "submit" name = "btn2" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form6}}
+                    
+                    <button type = "submit" name = "btn6" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form3}}
+
+                    <button type = "submit" name = "btn3" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form4}}
+
+                    <button type = "submit" name = "btn4" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+
+                <form method = "post">
+                    {% csrf_token %}
+                    {{form5}}
+
+                    <button type = "submit" name = "btn5" class = "btn btn-danger">Apply</button>
+                </form>
+                <hr>
+            </div>
+            <div class="col">
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please enter AC value in Hertz.</p>
+                <p class="indent"></p>
+                <hr>
+
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please enter DC value for the first DC input.</p>
+                <p class="indent"></p>
+                <hr>
+
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please enter DC value for the second DC input.</p>
+                <p class="indent"></p>
+                <hr>
+
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please enter the nodes to connect Channel1.</p>
+                <p class="indent"></p>
+                <hr>
+
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please enter the nodes to connect Channel2.</p>
+                <p class="indent"></p>
+                <hr>
+
+                <head>
+                    <style>p.indent{ padding-top: 2.0em }</style>
+                </head>
+                <p>Please choose Pot Value 1000 or 4400 ohms.</p>
+                <p class="indent"></p>
+                <hr>
+            </div>
+            <div class="col">
+                <hr>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

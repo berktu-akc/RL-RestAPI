@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% load crispy_forms_tags %}
+
+    <h3>Control Panel</h3>
+    <hr>
+
+    <p>Welcome, <small>{{request.user.username}}</small>
+    </p>
+    <hr>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+
+        <button type = "submit" class = "btn btn-danger">Upload</button>
+    </form>
+
+    <a class = "btn btn-danger" href = "/articles/">Send Ticket</a>
+
+{% endblock body %}
